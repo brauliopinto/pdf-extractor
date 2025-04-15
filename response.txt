@@ -1,0 +1,1 @@
+{'detail': "Unsupported file format. Please upload a file with one of the following extensions: ['jpg', 'jpeg', 'png', 'pdf']"}
