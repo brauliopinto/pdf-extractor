@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "dotenv>=0.9.9",
+    "loguru>=0.7.3",
     "openai>=1.74.0",
     "requests>=2.32.3",
 ]
