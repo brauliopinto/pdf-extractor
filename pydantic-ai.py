@@ -21,7 +21,7 @@ def main():
     class DadosLicitacoes(BaseModel):
         objeto: str
         indice: Optional[str] = None
-        valor_item: Optional[Dict[str, str]] = None
+        valor_item: Optional[Dict[str, Dict[str, str]]] = None
         exclusividade_item: Optional[Dict[str, str]] = None
 
 
@@ -34,7 +34,8 @@ def main():
             Seja o mais conciso e claro possível.
             1. O campo objeto deve conter apenas o objeto da licitação.
             2. O campo indice deve conter apenas o índice de reajuste de preços (por exemplo: IPCA, INPC, IGP-M ou outro).
-            3. O campo valor_item deve conter o valor total estimado por item, relacionando todos os itens. (por exemplo: {'item_1': '1000', 'item_2': '2000'})
+            3. O campo valor_item deve conter os dados relacionados a cada item licitado, como descrição ('desc'), quantidade ('qtde') e valor unitário (val_unit).
+                Exemplo: {'item_1': {'desc': 'bola', 'qtde': '100',  'val_unit': '1,50'}, 'item_2': {'desc': 'caneta', 'qtde': '1000',  'val_unit': '0,75'}}.
             4. O campo exclusividade_item deve dizer se determinado item é exclusivo para micro-empresas ou empresas de pequeno porte, onde 'Sim' significa que o item é exclusivo e 'Não' significa que não é. Exemplo de saída: {'item_1': 'Sim', 'item_2': 'Não'}.
             """
         ),
@@ -44,8 +45,8 @@ def main():
     specific_response = response_json.get("pages", "Key not found")
 
     result = agent.run_sync(specific_response)
-    print(result.output.model_dump_json())
-    #> width=10 height=20 depth=30 units='cm'
+    with open("metadata.json", "w") as file:
+        file.write(result.output.model_dump_json())
 
 
 if __name__ == "__main__":

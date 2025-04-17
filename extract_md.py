@@ -126,7 +126,7 @@ def process_local_pdf(pdf_filename):
 # Exemplo de uso
 if __name__ == "__main__":
     # Processa o arquivo PDF específico
-    pdf_filename = "PE_90014_2025_OPME_cirurgia_coluna.pdf"
+    pdf_filename = "EDITAL_PE_SRP_90003-2025_SESPA_MEDICAMENTOS.pdf"
     result = process_local_pdf(pdf_filename)
 
     # Access a specific key
