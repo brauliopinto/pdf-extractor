@@ -43,9 +43,15 @@ def main():
 
     response_json = process_local_pdf(pdf_filename)
     specific_response = response_json.get("pages", "Key not found")
+    with open("markdown.json", "w", encoding="utf-8") as file:
+        if isinstance(specific_response, list):
+            import json
+            file.write(json.dumps(specific_response, indent=4, ensure_ascii=False))  # Serialize list as JSON
+        else:
+            file.write(str(specific_response))  # Convert to string if not a list
 
     result = agent.run_sync(specific_response)
-    with open("metadata.json", "w") as file:
+    with open("response.json", "w") as file:
         file.write(result.output.model_dump_json())
 
 
