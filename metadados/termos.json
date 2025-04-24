@@ -1,0 +1,133 @@
+{
+    "name": "transferencias-voluntarias-termos-celebracao",
+    "description": "Estrutura de dados para representar informações sobre celebrações de termos de instrumentos legais de Transferência de Voluntárias.",
+    "version": "1.0.0",
+    "metadata_fields": [
+        {
+            "name": "tipo_instrumento",
+            "field_type": "str",
+            "description": "Tipo de instrumento legal, por exemplo: `TERMO DE FOMENTO`, `CONVÊNIO`, `TERMO DE COLABORAÇÃO`, etc.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "numero_ano_instrumento",
+            "field_type": "str",
+            "description": "O número e ano do instrumento legal, exemplo: `169/2022`.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "numero_processo",
+            "field_type": "str",
+            "description": "Número do processo associado ao instrumento legal, utilizado para referência e controle interno. Pode ser encontrado em diversas partes do documento, em especial no diário oficial.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "nome_responsavel_concedente",
+            "field_type": "str",
+            "description": "Nome completo da autoridade administrativa que representa a entidade CONCEDENTE no documento legal.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "cpf_responsavel_concedente",
+            "field_type": "str",
+            "description": "CPF da autoridade administrativa que representa formalmente a entidade CONCEDENTE no documento legal.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "data_assinatura_digital",
+            "field_type": "str",
+            "description": "Data de assinatura digital do acordo, por exemplo: `05/01/2021`.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "data_assinatura_diario_oficial",
+            "field_type": "str",
+            "description": "Data de assinatura do documento com base no Diário Oficial, por exemplo: `05/01/2021`.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "inicio_vigencia",
+            "field_type": "str",
+            "description": "Data de início do período de vigência do acordo, por exemplo: `05/01/2021`.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "fim_vigencia",
+            "field_type": "str",
+            "description": "Data de término do período de vigência do acordo, por exemplo: `05/01/2021`.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "cnpj_concedente",
+            "field_type": "str",
+            "description": "CNPJ da entidade concedente do acordo.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "razao_social_concedente",
+            "field_type": "str",
+            "description": "Razão social da entidade concedente.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "cnpj_convenente",
+            "field_type": "str",
+            "description": "CNPJ da entidade recebedora ou OSC parceira.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "razao_social_convenente",
+            "field_type": "str",
+            "description": "Razão social da entidade recebedora ou OSC parceira.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "cpf_responsavel",
+            "field_type": "str",
+            "description": "CPF do responsável pela entidade recebedora.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "nome_responsavel",
+            "field_type": "str",
+            "description": "Nome do responsável pela entidade recebedora.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "valor_repasse",
+            "field_type": "str",
+            "description": "Extrair apenas o valor monetário explícito dos recursos transferidos, como 'R$ 500.000,00'.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "valor_contrapartida",
+            "field_type": "str",
+            "description": "Extrair apenas valores monetários explícitos, como 'R$ 700.000,00', referentes à contrapartida fornecida pela entidade recebedora.",
+            "default_value": null,
+            "examples": []
+        },
+        {
+            "name": "valor_contrapartida_bens_servicos",
+            "field_type": "str",
+            "description": "Extrair apenas valores monetários explícitos em bens ou serviços, como 'R$ 100.000,00'.",
+            "default_value": null,
+            "examples": []
+        }
+    ]
+}
